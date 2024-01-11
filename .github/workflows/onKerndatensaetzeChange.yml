@@ -1,0 +1,34 @@
+name: Run Script on kerndatensaetz.csv change
+# when kerndatensaetz.csv is changed
+# run script to update other csv files based on kerndatensaetz.csv
+
+on:
+  push:
+    paths:
+      - "data/kerndatensaetze.csv"
+  pull_request:
+    paths:
+      - "data/kerndatensaetze.csv"
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: npm install
+
+      - name: Run script
+        run: node index
+
+      - name: Commit and Push CSV
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add data/*
+          git reset HEAD data/kerndatensaetze.csv
+          git commit -m "updated CSV files based on kerndatensetz csv" || true  # The script won't fail if there's nothing to commit
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
