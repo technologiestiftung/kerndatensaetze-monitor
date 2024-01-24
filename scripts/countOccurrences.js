@@ -41,11 +41,7 @@ countOccurrences(
   "Kategorie"
 );
 
-countOccurrences(
-  "./data/kerndatensaetze-raw.csv",
-  "./data/offen.csv",
-  "Öffnungsgrad"
-);
+countOccurrences("./data/kerndatensaetze-raw.csv", "./data/offen.csv", "Offen");
 
 countOccurrences(
   "./data/kerndatensaetze-raw.csv",
