@@ -45,6 +45,12 @@ countOccurrences("./data/kerndatensaetze-raw.csv", "./data/offen.csv", "Offen");
 
 countOccurrences(
   "./data/kerndatensaetze-raw.csv",
+  "./data/erstgespraech.csv",
+  "Erstgespräch"
+);
+
+countOccurrences(
+  "./data/kerndatensaetze-raw.csv",
   "./data/institutionen.csv",
   "Institution",
   "Institution"
