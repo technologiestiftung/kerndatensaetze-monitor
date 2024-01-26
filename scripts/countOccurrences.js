@@ -145,7 +145,8 @@ formatTableForViz();
 function makeMetaData(fileName, extraText) {
   const metaData = {
     annotate: {
-      notes: "Stand: " + convertTimestamp(new Date()) + extraText,
+      notes:
+        "Stand: " + convertTimestamp(new Date()) + (extraText ? extraText : ""),
     },
   };
 
