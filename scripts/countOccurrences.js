@@ -145,7 +145,7 @@ formatTableForViz();
 function makeMetaData() {
   const metaData = {
     annotate: {
-      notes: "Zuletzt aktualisiert: " + convertTimestamp(new Date()),
+      notes: "Stand: " + convertTimestamp(new Date()),
     },
   };
 
