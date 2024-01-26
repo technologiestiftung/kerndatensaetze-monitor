@@ -142,15 +142,15 @@ function formatTableForViz() {
 
 formatTableForViz();
 
-function makeMetaData() {
+function makeMetaData(fileName, extraText) {
   const metaData = {
     annotate: {
-      notes: "Stand: " + convertTimestamp(new Date()),
+      notes: "Stand: " + convertTimestamp(new Date()) + extraText,
     },
   };
 
   fs.writeFile(
-    "./data/metaData.json",
+    "./data/" + fileName + ".json",
     JSON.stringify(metaData),
     {
       encoding: "utf8",
@@ -159,4 +159,8 @@ function makeMetaData() {
   );
 }
 
-makeMetaData();
+makeMetaData("metaData");
+
+const extraText =
+  " | *Mit Institutionen sind Berliner Behörde, nachgelagerte Behörden oder landeseigene Unternehmen gemeint, bei denen die Kerndatensätze vermutet werden. Es kann vorkommen, dass die hier genannten Institutionen nicht selbst die datenerhebende Stelle sind und nur eine koordinierende Rolle einnehmen.";
+makeMetaData("metaDataInst", extraText);
