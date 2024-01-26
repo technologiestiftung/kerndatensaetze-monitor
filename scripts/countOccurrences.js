@@ -2,6 +2,20 @@ const fs = require("fs");
 const csv = require("csv-parser");
 const { format } = require("fast-csv");
 
+function convertTimestamp(timestamp) {
+  // Create a new Date object using the timestamp
+  const date = new Date(timestamp);
+
+  // Extract day, month, and year
+  const day = date.getDate(); // Day of the month
+  let month = date.getMonth() + 1; // Month is 0-indexed in JavaScript, so add 1
+  month = month.toString.length === 1 ? "0" + month : month;
+  const year = date.getFullYear(); // Year
+
+  // Format the date in "day month year" format
+  return `${day}.${month}.${year}`;
+}
+
 // Function to count occurrences based on a specified column
 function countOccurrences(inputCsv, outputCsv, header, altHeader) {
   const counts = {};
@@ -127,3 +141,22 @@ function formatTableForViz() {
 }
 
 formatTableForViz();
+
+function makeMetaData() {
+  const metaData = {
+    annotate: {
+      notes: "Zuletzt aktualisiert: " + convertTimestamp(new Date()),
+    },
+  };
+
+  fs.writeFile(
+    "./data/metaData.json",
+    JSON.stringify(metaData),
+    {
+      encoding: "utf8",
+    },
+    (err) => {}
+  );
+}
+
+makeMetaData();
