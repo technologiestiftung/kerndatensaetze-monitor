@@ -71,7 +71,8 @@ nein,,Gesetzestexte,,Bereitstellung von Gesetze als einfacher Volltext,SenJustV 
 nein,,Vermisste Personen / Polizei-Meldungen,,"Eine API mit aktuelle Daten zu vermissten Personen mit einer Beschreibung der Person, Datum der Meldung, usw.",SenInnSport - Abteilung Öffentliche Sicherheit und Ordnung Fachaufsicht über Polizei und Feuerwehr,ausstehend
 nein,,Barrierefreiheit öffentlicher Gebäude,,"Information zur Barrierefreiheit öffentlicher Gebäude: Standorte von Rampen, Aufzügen, etc.",SenInnSport - Abteilung ZS,ausstehend
 nein,,Wartezeiten Ämter,,Informationen zu den Wartezeiten und der Anzahl der wartenden Personen nach Ämtern,SenInnSport - Abteilung ZS,ausstehend
-nein,,Politische Mandatare,,"Liste von allen aktuellen politischen Mandataren mit Name, Partei, Alter, Geschlecht, Beruf, usw.",SenInnSport - Abteilung Staats- und Verwaltungsrecht,ausstehend
+begrenzt,"<span style=""font-size: 25px;"" title=""Zusätzlich zum Abgeordnetenhaus gibt die Berliner Landeszentrale für politische Bildung eine Liste aller Mitglieder der Bezirsverodnetenversammlung heraus"">&#9432;</span>",<a style='text-decoration: underline; line-height: 1.4;color: #222' href='https://www.parlament-berlin.de/das-parlament/abgeordnete/alphabetische-suche' target='_blank'>Politische Mandatare</a>,,"Liste von allen aktuellen politischen Mandataren mit Name, Partei, Alter, Geschlecht, Beruf, usw.","Abgeordnetenhaus Berlin/Berliner Landeszentrale
+für politische Bildung",ausstehend
 nein,,Vorhabenliste Bürgerbeteiligung,,Liste aller geplanten Projekte wo eine Form Bürgerbeteiligung geplant ist,SenInnSport - Abteilung Staats- und Verwaltungsrecht,ausstehend
 nein,,Wohnungsbaupotenzialflächen,,Flächengeometrien und Informationen zu Potenzialflächen,SenSBW - Abteilung Stadtplanung,ausstehend
 nein,,Wohnungsbauprojekte,,Alle staatliche Bauprojekte mit Standorten und Planungsvorhaben,SenSBW - Abteilung Stadtplanung,ausstehend
